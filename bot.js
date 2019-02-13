@@ -172,7 +172,6 @@ client.on("message", async message => {
 	var prefix = "$";
          const nos = new Discord.RichEmbed()
      .setColor("22BF41");
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
    
     if(message.content.toLowerCase().startsWith(prefix + `setcategory`)){
     if(!setc[message.guild.id]) setc[message.guild.id] = {
@@ -218,7 +217,7 @@ client.on("message", async message => {
 	var prefix = "$";
          const nos = new Discord.RichEmbed()
      .setColor("22BF41");
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
+  
    
     if(message.content.toLowerCase().startsWith(prefix + `setrole`)){
     if(!setrole[message.guild.id]) setrole[message.guild.id] = {
@@ -253,7 +252,6 @@ client.on("message", async message => {
 	var prefix = "$";
      const nos = new Discord.RichEmbed()
      .setColor("22BF41");
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
 if(message.content.toLowerCase().startsWith(prefix + `new`)) {
   if(!setc[message.guild.id]) setc[message.guild.id] = {
     category: "Tickets"
