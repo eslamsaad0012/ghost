@@ -804,7 +804,7 @@ footer: {
 
 client.on("message", message => {
 	var prefix = "$"
-    if (message.content === ($ + "help")) {
+    if (message.content === (${prefix}+ "help")) {
      const embed = new Discord.RichEmbed()
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
@@ -833,7 +833,7 @@ client.on("message", message => {
    });  
 client.on('message', message => {
 	var prefix = "$"
-     if (message.content === ($ + "help")) {
+     if (message.content === (${prefix}+ "help")) {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
