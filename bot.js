@@ -733,7 +733,6 @@ client.on("message", msg => {
           .addField('🎲| playing :', `${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name}`, true)
    .addField(':military_medal:  rank', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
           .addField('📅| Join the Discord in :', `${msg.createdAt}`,true);
-		  .addField(' :', ``,true);
       msg.channel.send({embed: embed})
   }
 });
