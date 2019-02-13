@@ -172,7 +172,7 @@ client.on("message", async message => {
 	var prefix = "$";
          const nos = new Discord.RichEmbed()
      .setColor("22BF41");
-   
+   if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
     if(message.content.toLowerCase().startsWith(prefix + `setcategory`)){
     if(!setc[message.guild.id]) setc[message.guild.id] = {
     category: "Tickets"
@@ -218,7 +218,7 @@ client.on("message", async message => {
          const nos = new Discord.RichEmbed()
      .setColor("22BF41");
   
-   
+   if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
     if(message.content.toLowerCase().startsWith(prefix + `setrole`)){
     if(!setrole[message.guild.id]) setrole[message.guild.id] = {
     role: "Support Team"
@@ -252,6 +252,7 @@ client.on("message", async message => {
 	var prefix = "$";
      const nos = new Discord.RichEmbed()
      .setColor("22BF41");
+	if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
 if(message.content.toLowerCase().startsWith(prefix + `new`)) {
   if(!setc[message.guild.id]) setc[message.guild.id] = {
     category: "Tickets"
@@ -380,7 +381,7 @@ if(message.content.toLowerCase().startsWith(prefix + `close`)) {
  
     message.channel.send(yes)
     .then((m) => {
-      message.channel.awaitMessages(response => response.content === '-close', {
+      message.channel.awaitMessages(response => response.content === '$close', {
         max: 1,
         time: 20000,
         errors: ['time'],
