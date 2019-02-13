@@ -805,7 +805,7 @@ client.on('message', message => {
  var prefix = "$";
 if (message.content.startsWith(prefix + 'help')) {
     let pages = [
-	         ------------------------------
+	        
 		 الاوامر العاديه
          $avatar:
          $id :
@@ -814,11 +814,13 @@ if (message.content.startsWith(prefix + 'help')) {
 		 $topinv:
 		 $invite:
 		 $تقديم:
-         ------------------------------
+	    
+	    
 		 اوامر الادمن
          $clear :
 		 $bc:
 		 $gstart:
+               
 	let page = 1;
 
     let embed = new Discord.RichEmbed()
