@@ -165,8 +165,7 @@ ${message.author.id}`);
 	
 	
 	
-	
-	var prefix2 = '$';
+var prefix2 = '$';
 	const setc = {}
 const setrole = {}
 client.on("message", async message => {
@@ -218,6 +217,7 @@ client.on("message", async message => {
  
  
 client.on("message", async message => {
+	var prefix = "$";
          const nos = new Discord.RichEmbed()
      .setDescription(`:x: This command only for servers`)
      .setColor("22BF41");
@@ -254,6 +254,7 @@ client.on("message", async message => {
 });
  
 client.on("message", async message => {
+	var prefix = "$";
      const nos = new Discord.RichEmbed()
      .setDescription(`:x: This command only for servers`)
      .setColor("22BF41");
@@ -370,7 +371,7 @@ if(message.content.toLowerCase().startsWith(prefix + `new`)) {
       }  
 }
  
- 
+ var prefix = "$";
 if(message.content.toLowerCase().startsWith(prefix + `close`)) {   
     let team = message.member.roles.find("name", "Support Team");
      const d11x1xx = new Discord.RichEmbed()
