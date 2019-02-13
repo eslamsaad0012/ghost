@@ -832,6 +832,7 @@ client.on("message", message => {
    }
    });  
 client.on('message', message => {
+	var prefix = "$"
      if (message.content === (prefix + "help")) {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
