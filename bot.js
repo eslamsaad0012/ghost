@@ -791,14 +791,19 @@ footer: {
 
 });
 
-                                   client.on("message", message => {
-                                    var prefix = "$";
-                                 if (message.content === "$help") {
-                                     message.channel.send('');
-                                  const embed = new Discord.RichEmbed() 
-                                      .setColor("RANDOM")
-                                      .setDescription(`
-                                      **
+var prefix = "$"
+
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+   
+   **
+   
+
+   **
    
  	         ------------------------------
 		 الاوامر العاديه
@@ -807,17 +812,29 @@ footer: {
          $serverinfo :
 		 $link:
 		 $تقديم:
+		 $new
          ------------------------------
 		 اوامر الادمن
          $clear :
 		 $bc:
 		 $gstart:
+
    **
-                                `)
-                                   message.author.sendEmbed(embed)
-                                    
-                                   }
-                                   }); 
+
+   `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });  
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done" , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 client.login(process.env.BOT_TOKEN);
