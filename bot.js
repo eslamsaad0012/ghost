@@ -171,7 +171,6 @@ const setrole = {}
 client.on("message", async message => {
 	var prefix = "$";
          const nos = new Discord.RichEmbed()
-     .setDescription(`:x: This command only for servers`)
      .setColor("22BF41");
   if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -219,7 +218,6 @@ client.on("message", async message => {
 client.on("message", async message => {
 	var prefix = "$";
          const nos = new Discord.RichEmbed()
-     .setDescription(`:x: This command only for servers`)
      .setColor("22BF41");
   if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -256,7 +254,6 @@ client.on("message", async message => {
 client.on("message", async message => {
 	var prefix = "$";
      const nos = new Discord.RichEmbed()
-     .setDescription(`:x: This command only for servers`)
      .setColor("22BF41");
   if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
   if (!message.content.startsWith(prefix) || message.author.bot) return;
