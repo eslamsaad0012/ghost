@@ -172,7 +172,6 @@ client.on("message", async message => {
 	var prefix = "$";
          const nos = new Discord.RichEmbed()
      .setColor("22BF41");
-  if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
   if (!message.content.startsWith(prefix) || message.author.bot) return;
    
     if(message.content.toLowerCase().startsWith(prefix + `setcategory`)){
@@ -219,7 +218,6 @@ client.on("message", async message => {
 	var prefix = "$";
          const nos = new Discord.RichEmbed()
      .setColor("22BF41");
-  if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
   if (!message.content.startsWith(prefix) || message.author.bot) return;
    
     if(message.content.toLowerCase().startsWith(prefix + `setrole`)){
@@ -255,7 +253,6 @@ client.on("message", async message => {
 	var prefix = "$";
      const nos = new Discord.RichEmbed()
      .setColor("22BF41");
-  if(!message.channel.guild) return message.channel.send(nos).then(m => m.delete(5000));
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 if(message.content.toLowerCase().startsWith(prefix + `new`)) {
   if(!setc[message.guild.id]) setc[message.guild.id] = {
